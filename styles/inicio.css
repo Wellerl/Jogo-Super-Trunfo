@@ -1,0 +1,73 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Orbitron', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.geral {
+    padding: 30px 60px;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  /* Move o elemento 50% para a esquerda e 50% para cima com base no seu próprio tamanho, centralizando ele perfeitamente */
+}
+
+.informacoes h2 {
+    background: rgba(28, 28, 28, 0.384);
+    backdrop-filter: blur(2px); /* Aplica um desfoque de 2px no fundo atrás do elemento, criando um efeito de vidro fosco */
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease; /* Aplica uma transição suave de 0.3 segundos para qualquer mudança de estilo (como cor, tamanho, posição etc.) */
+    cursor: pointer;
+    width: fit-content;  /* Faz com que a largura do elemento se ajuste automaticamente ao tamanho do conteúdo interno */
+    color: #ffffff;
+    font-size: 48px;
+    position: relative;
+    right: 160%;
+    top: 125px;
+}
+
+.informacoes h2:hover {
+    background: rgb(27, 27, 27);
+    transform: scale(1.05);  /* Aumenta o tamanho do elemento em 5%, deixando ele 1.05x maior (usado para dar efeito de destaque ou "zoom") */
+    transition: 0.7s ease;
+}
+
+@keyframes flutuar { /* keyframes é uma regra CSS que define as etapas de uma animação ao longo do tempo. */
+    0% {
+        transform: translateY(0px); /* Começa na posição original */
+    }
+
+    50% {
+        transform: translateY(-3px); /* Sobe 3 pixels, simulando flutuação */
+    }
+
+    100% {
+        transform: translateY(0px); /* Retorna à posição inicial */
+    }
+}
+
+.informacoes h2 {
+    animation: flutuar 2s ease-in-out infinite; /*deixa o h2 flutuante*/
+}
+
+
+img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: contrast(120%) brightness(110%) saturate(155%);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.informacoes a{
+    text-decoration: none;
+}
